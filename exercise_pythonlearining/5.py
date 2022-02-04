@@ -2,8 +2,8 @@
 # if the number is greater than 17 return double the absolute difference.
 print("if the number is greater than 17 return double the absolute difference.")
 val1 = int(input("Enter number:"))
-
+d=17-val1
 if val1 > 17:
-    print("Double ",val1 * 2)
+    print("Double ",abs(d)*2)
 else:
-    print("Difference ",17 - val1)
+    print("Difference ",abs(d))

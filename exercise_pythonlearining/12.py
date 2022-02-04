@@ -3,6 +3,8 @@
 Emps = {"Emp1":"Sejal", "Emp2":"Hardik", "Emp3":"Harsh"}
 # inputEmpNames=input("Enter Comma-separate Employees Name: ")
 
-EmpNames=inputEmpNames.split(',')
-for key in Emps:
-    print("Key is " + key + " and Value is " + Emps[key])
+# for key in Emps:
+#     print("Key is " + key + " and Value is " + Emps[key])
+
+for key, value in Emps.items():
+    print("Key is " + key + " and Value is " + value)
