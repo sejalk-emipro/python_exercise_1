@@ -4,14 +4,12 @@ numbers = [ 386, 462, 47, 418, 907, 344, 236, 375, 823, 566, 597, 978, 328, 615,
 list=[]
 for x in numbers:
     if x == 237:
-        # print(x)
-        list.append(x)
         break;
     elif x % 2 == 0:
         list.append(x)
-        # print(x)
-# list.sort()
+
 print(list)
-#dynamic print even number
-r=int(input("Enter a number : "))
-print([v for v in range(r+1) if v % 2 == 0])
+end = numbers.index(237)
+print([x for i,x in enumerate(numbers) if x%2==0 and i<end])
+
+
