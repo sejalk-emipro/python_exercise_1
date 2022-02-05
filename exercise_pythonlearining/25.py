@@ -4,11 +4,11 @@
 list=['abc','asa','010','xyz']
 
 def rtnCount(list):
-
     c=0
     for l in list:
         if len(l)>2 and l[0]==l[-1]:
             c+=1
     return c
-
 print(rtnCount(list))
+print([x for x in list if len(x)>2 and x[0]==x[-1]])
+

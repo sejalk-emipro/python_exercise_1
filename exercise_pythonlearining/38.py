@@ -10,24 +10,24 @@
 # Unit Price is 20
 # Order total is : 300
 
-class customer:
-    def __init__(self,Customer , CustomerEmail):
-        self.Customer = Customer
-        self.CustomerEmail = CustomerEmail
+class Customer:
+    def __init__(self,customer , customer_email):
+        self.customer = customer
+        self.customer_email = customer_email
 
 class Product:
-    def __init__(self,Name,Qty,price):
-        self.Name = Name
-        self.Qty = Qty
-        self.price = price
+    def __init__(self,prod_name,prod_qty,prod_price):
+        self.prod_name = prod_name
+        self.prod_qty = prod_qty
+        self.prod_price = prod_price
 
 class Order(customer,Product):
-    def __init__(self, orderno,Customer, CustomerEmail,Name, Qty, price):
-        customer.__init__(self, Customer, CustomerEmail)
-        Product.__init__(self, Name,Qty,price)
+    def __init__(self, orderno,customer, customer_email,prod_name, prod_qty, prod_price):
+        customer.__init__(self, customer, customer_email)
+        Product.__init__(self, prod_name,prod_qty,prod_price)
         self.orderno=orderno
         print(" Order No :{}\n Customer :{}\n Customer Email :{}\n Name of the product is :{}\n Product Qty is :{}\n Unit Price is {}\n Order total is :{}"
-              .format(self.orderno,self.Customer,self.CustomerEmail,self.Name,self.Qty,self.price,(self.Qty*self.price)))
+              .format(self.orderno,self.customer,self.customer_email,self.prod_name,self.prod_qty,self.prod_price,(self.Qty*self.prod_price)))
 
 
 

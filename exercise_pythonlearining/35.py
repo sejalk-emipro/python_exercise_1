@@ -3,4 +3,9 @@
 # New Dictionary after dropping empty items: {'c1': 'Red', 'c2': 'Green'}
 a={'c1': 'Red', 'c2': 'Green', 'c3': None}
 # res = dict(filter(None, ({key : val for key, val in sub.items() if val} for sub in a)))
+for k,v in a.items():
+    if v is None:
+        del a[k]
+
+print(a)
 print({key:value for (key, value) in a.items() if value is not None})
